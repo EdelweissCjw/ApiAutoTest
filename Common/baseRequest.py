@@ -32,6 +32,7 @@ class ClientApiRequest(object):
         # 请求URL
         try:
             respon = request.urlopen(url=url, data=data)
+
         except error:
             print(error)
 
