@@ -4,7 +4,6 @@
 # Request(api='getScoreRank', privateData={'score': '600', 'provinceId': '3'})    # 获取用户分数所属批次
 # Request(api='getResidueDistrictCount', privateData={})  # 获取考区可修改次数
 # Request(api='getResidueScoreCount', privateData={})     # 获取高考后可修改次数
-
+# Request(api='province/batch/config/getBatchByProvinceId', privateData={'provinceId': '3'})  # 获取省份批次
 # Request(api='getInvitationRecord', privateData={})    # 获取用户体验时长
 # Request(api='getInvitationTotal', privateData={})    # 获取用户总计体验时长
-# Request(api='province/batch/config/getBatchByProvinceId', privateData={'provinceId': '3'})  # 获取省份批次
