@@ -4,3 +4,4 @@
 
 # XX
 *.pyc
+/testCase/
