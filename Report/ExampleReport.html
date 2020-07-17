@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>Example用例执行报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-07-16 11:01:13</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.560730</p>
-<p class='attribute'><strong>状态:</strong> 通过 2 失败 1</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-07-17 11:11:48</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00</p>
+<p class='attribute'><strong>状态:</strong> 错误 9</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>HTMLTestRunner</p></div>
@@ -233,25 +233,34 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
-        <td>test_PersonalInformation.PersonalInformation</td>
-        <td>1</td>
-        <td>1</td>
+    <tr class='errorClass'>
+        <td>unittest.loader._FailedTest</td>
+        <td>9</td>
         <td>0</td>
         <td>0</td>
-        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+        <td>9</td>
+        <td><a href="javascript:showClassDetail('c1',9)">详情</a></td>
     </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_personalInformation</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_PersonalInformation</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a>
 
-    <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: https://testmin.ubzyw.com/user/v1/rest/user/personalInformation 请求成功
+    <div id='div_ft1.1' class="popup_window">
+        <pre>ft1.1: ImportError: Failed to import test module: test_PersonalInformation
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_PersonalInformation.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
 </pre>
     </div>
     <!--css div popup end-->
@@ -259,28 +268,25 @@
     </td>
 </tr>
 
-    <tr class='failClass'>
-        <td>test_getUserInfoByInvitedCode.GetUserInfoByInvitedCode</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
-    </tr>
-
-<tr id='ft2.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_getUserInfoByInvited</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getBatchByProvinceId</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        失败</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
 
-    <div id='div_ft2.1' class="popup_window">
-        <pre>ft2.1: Traceback (most recent call last):
-  File "F:\JetBrains\Project\Apitest\testCase\test_getUserInfoByInvitedCode.py", line 26, in test_getUserInfoByInvited
-    self.assertNotEqual(final, '数据为空')
-AssertionError: '数据为空' == '数据为空'
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: ImportError: Failed to import test module: test_getBatchByProvinceId
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getBatchByProvinceId.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
 </pre>
     </div>
     <!--css div popup end-->
@@ -288,25 +294,181 @@ AssertionError: '数据为空' == '数据为空'
     </td>
 </tr>
 
-    <tr class='passClass'>
-        <td>test_getUserUpdateInfoFlag.GetUserUpdateInfoFlag</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c3',1)">详情</a></td>
-    </tr>
-
-<tr id='pt3.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_getUserUpdateInfoFlag</div></td>
+<tr id='ft1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getInvitationRecord</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        错误</a>
 
-    <div id='div_pt3.1' class="popup_window">
-        <pre>pt3.1: https://testmin.ubzyw.com/user/v1/rest/user/getUserUpdateInfoFlag 请求成功
+    <div id='div_ft1.3' class="popup_window">
+        <pre>ft1.3: ImportError: Failed to import test module: test_getInvitationRecord
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationRecord.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getInvitationTotal</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        错误</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <pre>ft1.4: ImportError: Failed to import test module: test_getInvitationTotal
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationTotal.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getResidueDistrictCount</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        错误</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <pre>ft1.5: ImportError: Failed to import test module: test_getResidueDistrictCount
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueDistrictCount.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getResidueScoreCount</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+        错误</a>
+
+    <div id='div_ft1.6' class="popup_window">
+        <pre>ft1.6: ImportError: Failed to import test module: test_getResidueScoreCount
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueScoreCount.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getScoreRank</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        错误</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <pre>ft1.7: ImportError: Failed to import test module: test_getScoreRank
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getScoreRank.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getUserInfoByInvitedCode</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+        错误</a>
+
+    <div id='div_ft1.8' class="popup_window">
+        <pre>ft1.8: ImportError: Failed to import test module: test_getUserInfoByInvitedCode
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getUserInfoByInvitedCode.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getUserUpdateInfoFlag</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+        错误</a>
+
+    <div id='div_ft1.9' class="popup_window">
+        <pre>ft1.9: ImportError: Failed to import test module: test_getUserUpdateInfoFlag
+Traceback (most recent call last):
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "F:\JetBrains\Project\Apitest\testCase\test_getUserUpdateInfoFlag.py", line 3, in &lt;module&gt;
+    from Apitest.Common.baseRequest import ClientApiRequest
+ModuleNotFoundError: No module named 'Apitest'
+
 </pre>
     </div>
     <!--css div popup end-->
@@ -316,10 +478,10 @@ AssertionError: '数据为空' == '数据为空'
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>3</td>
-            <td>2</td>
-            <td>1</td>
+            <td>9</td>
             <td>0</td>
+            <td>0</td>
+            <td>9</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -353,9 +515,9 @@ AssertionError: '数据为空' == '数据为空'
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
-                        {value:1, name:'失败'},
-                        {value:0, name:'错误'}
+                        {value:0, name:'通过'},
+                        {value:0, name:'失败'},
+                        {value:9, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

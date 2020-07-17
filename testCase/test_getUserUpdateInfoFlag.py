@@ -1,7 +1,7 @@
 """getUserUpdateInfoFlag接口testCase"""
 import unittest
-from Apitest.Common.baseRequest import ClientApiRequest
-from Apitest import Setting
+from Common.baseRequest import ClientApiRequest
+import Setting
 
 class GetUserUpdateInfoFlag(unittest.TestCase):
     def setUp(self):

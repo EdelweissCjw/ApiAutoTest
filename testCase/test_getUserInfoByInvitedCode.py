@@ -1,7 +1,7 @@
 """getUserInfoByInvitedCode接口测试用例"""
 import unittest
-from Apitest.Common.baseRequest import ClientApiRequest
-from Apitest import Setting
+from Common.baseRequest import ClientApiRequest
+import Setting
 
 
 class GetUserInfoByInvitedCode(unittest.TestCase):

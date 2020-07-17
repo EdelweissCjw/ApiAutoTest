@@ -1,7 +1,7 @@
 """personalInformation接口testCase"""
 import unittest
-from Apitest.Common.baseRequest import ClientApiRequest
-from Apitest import Setting
+from Common.baseRequest import ClientApiRequest
+import Setting
 
 class PersonalInformation(unittest.TestCase):
     def setUp(self):
