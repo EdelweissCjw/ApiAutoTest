@@ -200,8 +200,8 @@
         
     <div class='page-header'>
         <h1>Example用例执行报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-07-17 11:11:48</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-07-17 13:50:41</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:01.652744</p>
 <p class='attribute'><strong>状态:</strong> 错误 9</p>
 
     </div>
@@ -234,16 +234,16 @@
         </tr>
         
     <tr class='errorClass'>
-        <td>unittest.loader._FailedTest</td>
-        <td>9</td>
+        <td>test_PersonalInformation.PersonalInformation</td>
+        <td>1</td>
         <td>0</td>
         <td>0</td>
-        <td>9</td>
-        <td><a href="javascript:showClassDetail('c1',9)">详情</a></td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_PersonalInformation</div></td>
+    <td class='errorCase'><div class='testcase'>test_personalInformation</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -251,16 +251,31 @@
         错误</a>
 
     <div id='div_ft1.1' class="popup_window">
-        <pre>ft1.1: ImportError: Failed to import test module: test_PersonalInformation
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_PersonalInformation.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+        <pre>ft1.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_PersonalInformation.py", line 19, in test_personalInformation
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -268,25 +283,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.2' class='none'>
+    <tr class='errorClass'>
+        <td>test_getBatchByProvinceId.GetBatchByProvinceId</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+    </tr>
+
+<tr id='ft2.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getBatchByProvinceId</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
         错误</a>
 
-    <div id='div_ft1.2' class="popup_window">
-        <pre>ft1.2: ImportError: Failed to import test module: test_getBatchByProvinceId
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getBatchByProvinceId.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft2.1' class="popup_window">
+        <pre>ft2.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getBatchByProvinceId.py", line 23, in test_getBatchByProvinceId
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -294,25 +333,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.3' class='none'>
+    <tr class='errorClass'>
+        <td>test_getInvitationRecord.GetInvitationRecord</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c3',1)">详情</a></td>
+    </tr>
+
+<tr id='ft3.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getInvitationRecord</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
         错误</a>
 
-    <div id='div_ft1.3' class="popup_window">
-        <pre>ft1.3: ImportError: Failed to import test module: test_getInvitationRecord
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationRecord.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft3.1' class="popup_window">
+        <pre>ft3.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationRecord.py", line 23, in test_getInvitationRecord
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -320,25 +383,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.4' class='none'>
+    <tr class='errorClass'>
+        <td>test_getInvitationTotal.GetInvitationTotal</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c4',1)">详情</a></td>
+    </tr>
+
+<tr id='ft4.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getInvitationTotal</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
         错误</a>
 
-    <div id='div_ft1.4' class="popup_window">
-        <pre>ft1.4: ImportError: Failed to import test module: test_getInvitationTotal
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationTotal.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft4.1' class="popup_window">
+        <pre>ft4.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getInvitationTotal.py", line 23, in test_getInvitationTotal
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -346,25 +433,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.5' class='none'>
+    <tr class='errorClass'>
+        <td>test_getResidueDistrictCount.GetResidueDistrictCount</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c5',1)">详情</a></td>
+    </tr>
+
+<tr id='ft5.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getResidueDistrictCount</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
         错误</a>
 
-    <div id='div_ft1.5' class="popup_window">
-        <pre>ft1.5: ImportError: Failed to import test module: test_getResidueDistrictCount
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueDistrictCount.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft5.1' class="popup_window">
+        <pre>ft5.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueDistrictCount.py", line 23, in test_getResidueDistrictCount
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -372,25 +483,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.6' class='none'>
+    <tr class='errorClass'>
+        <td>test_getResidueScoreCount.GetResidueScoreCount</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c6',1)">详情</a></td>
+    </tr>
+
+<tr id='ft6.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getResidueScoreCount</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
         错误</a>
 
-    <div id='div_ft1.6' class="popup_window">
-        <pre>ft1.6: ImportError: Failed to import test module: test_getResidueScoreCount
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueScoreCount.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft6.1' class="popup_window">
+        <pre>ft6.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getResidueScoreCount.py", line 23, in test_getResidueScoreCount
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -398,25 +533,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.7' class='none'>
+    <tr class='errorClass'>
+        <td>test_getScoreRank.GetScoreRank</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c7',1)">详情</a></td>
+    </tr>
+
+<tr id='ft7.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getScoreRank</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
         错误</a>
 
-    <div id='div_ft1.7' class="popup_window">
-        <pre>ft1.7: ImportError: Failed to import test module: test_getScoreRank
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getScoreRank.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft7.1' class="popup_window">
+        <pre>ft7.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getScoreRank.py", line 23, in test_getScoreRank
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -424,25 +583,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.8' class='none'>
-    <td class='errorCase'><div class='testcase'>test_getUserInfoByInvitedCode</div></td>
+    <tr class='errorClass'>
+        <td>test_getUserInfoByInvitedCode.GetUserInfoByInvitedCode</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c8',1)">详情</a></td>
+    </tr>
+
+<tr id='ft8.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_getUserInfoByInvited</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.1')" >
         错误</a>
 
-    <div id='div_ft1.8' class="popup_window">
-        <pre>ft1.8: ImportError: Failed to import test module: test_getUserInfoByInvitedCode
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getUserInfoByInvitedCode.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft8.1' class="popup_window">
+        <pre>ft8.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getUserInfoByInvitedCode.py", line 21, in test_getUserInfoByInvited
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
@@ -450,25 +633,49 @@ ModuleNotFoundError: No module named 'Apitest'
     </td>
 </tr>
 
-<tr id='ft1.9' class='none'>
+    <tr class='errorClass'>
+        <td>test_getUserUpdateInfoFlag.GetUserUpdateInfoFlag</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c9',1)">详情</a></td>
+    </tr>
+
+<tr id='ft9.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_getUserUpdateInfoFlag</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.1')" >
         错误</a>
 
-    <div id='div_ft1.9' class="popup_window">
-        <pre>ft1.9: ImportError: Failed to import test module: test_getUserUpdateInfoFlag
-Traceback (most recent call last):
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Program Files\py3\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "F:\JetBrains\Project\Apitest\testCase\test_getUserUpdateInfoFlag.py", line 3, in &lt;module&gt;
-    from Apitest.Common.baseRequest import ClientApiRequest
-ModuleNotFoundError: No module named 'Apitest'
+    <div id='div_ft9.1' class="popup_window">
+        <pre>ft9.1: Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 34, in Request
+    respon = request.urlopen(url=url, data=data)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "D:\Program Files\py3\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\JetBrains\Project\Apitest\testCase\test_getUserUpdateInfoFlag.py", line 19, in test_getUserUpdateInfoFlag
+    result = ClientApiRequest.Request(self, apiName=self.apiName, privateData=self.privateData)
+  File "F:\JetBrains\Project\Apitest\Common\baseRequest.py", line 35, in Request
+    except error:
+TypeError: catching classes that do not inherit from BaseException is not allowed
 </pre>
     </div>
     <!--css div popup end-->
