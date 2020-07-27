@@ -7,3 +7,6 @@
 # Request(api='province/batch/config/getBatchByProvinceId', privateData={'provinceId': '3'})  # 获取省份批次
 # Request(api='getInvitationRecord', privateData={})    # 获取用户体验时长
 # Request(api='getInvitationTotal', privateData={})    # 获取用户总计体验时长
+
+接口地址：
+https://testmin.ubzyw.com/interface
