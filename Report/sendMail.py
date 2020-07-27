@@ -6,6 +6,7 @@ from email.mime.application import MIMEApplication
 
 class SendEmail(object):
     def __init__(self):
+        """初始化数据信息"""
         self.sender = '1026221520@qq.com'
         self.pwd = 'ijfhtpxogdxdbfic'
         self.user = 'CJW4818@163.com'
@@ -15,21 +16,26 @@ class SendEmail(object):
 
     def Email(self):
 
-        msg = MIMEMultipart()
+        msg = MIMEMultipart()   # 初始化发送信息
+
+        # 配置发送人，接收人邮箱地址
         msg['From'] = self.sender
         msg['To'] = self.user
         msg['Subject'] = self.subject
 
+        # 发送信息文本内容
         textApart = MIMEText(self.content)
 
+        # 将测试结果HTML文件添加为邮件附件
         htmlFile = 'ExampleReport.html'
         htmlApart = MIMEApplication(open(htmlFile, 'rb').read())
         htmlApart.add_header('Content-Disposition', 'attachment', filename=htmlFile)
 
+        # 文本内容、附件内容添加到邮件msg中
         msg.attach(textApart)
         msg.attach(htmlApart)
 
-
+        # 登录发件人邮箱并发送邮件
         try:
             server = smtplib.SMTP_SSL('smtp.qq.com', 465)
             server.login(self.sender, self.pwd)
@@ -42,7 +48,7 @@ class SendEmail(object):
 
     @staticmethod
     def runEmail():
-
+        #  运行发送邮件模块方法
         instance = SendEmail()
         instance.Email()
 
