@@ -22,9 +22,14 @@
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime
+from Report import runTestcase, sendMail
+
 
 def time():
     print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+    runTestcase.RunSuite.RunClass()  # 运行测试用例
+    sendMail.SendEmail.runEmail()  # 发送结果
 
 
 scheduler = BlockingScheduler()
