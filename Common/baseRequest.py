@@ -4,7 +4,6 @@ import json
 
 
 
-
 class ClientApiRequest(object):
 
     def __init__(self, module, realName, content):

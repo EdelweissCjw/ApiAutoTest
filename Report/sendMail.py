@@ -40,7 +40,7 @@ class SendEmail(object):
             server = smtplib.SMTP_SSL('smtp.qq.com', 465)
             server.login(self.sender, self.pwd)
             server.sendmail(self.sender, self.user, msg.as_string())
-            print('发送成功')
+            print('报告发送成功')
             server.quit()
 
         except smtplib.SMTPException as e:
