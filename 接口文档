@@ -1,0 +1,12 @@
+# Request(api='personalInformation', privateData={})
+# Request(api='getUserUpdateInfoFlag', privateData={'provinceId': '3'})    # 获取用户首页分数考区信息
+# Request(api='getUserInfoByInvitedCode', privateData={'invitedCode': '12060342'})   # 根据邀请码获取用户信息
+# Request(api='getScoreRank', privateData={'score': '600', 'provinceId': '3'})    # 获取用户分数所属批次
+# Request(api='getResidueDistrictCount', privateData={})  # 获取考区可修改次数
+# Request(api='getResidueScoreCount', privateData={})     # 获取高考后可修改次数
+# Request(api='province/batch/config/getBatchByProvinceId', privateData={'provinceId': '3'})  # 获取省份批次
+# Request(api='getInvitationRecord', privateData={})    # 获取用户体验时长
+# Request(api='getInvitationTotal', privateData={})    # 获取用户总计体验时长
+
+接口地址：
+https://testmin.ubzyw.com/interface
